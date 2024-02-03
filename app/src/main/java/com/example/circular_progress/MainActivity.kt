@@ -5,8 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -20,15 +18,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             Circular_progressTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                        CircularProgress(radius = 50.dp, color = Color.Green, number = 100, percentage = 0.9f, strokeWidth = 10.dp)
+                        //CircularProgress(radius = 50.dp, color = Color.Green, number = 100, percentage = 0.9f, strokeWidth = 10.dp)
+                        DigramProgress(
+                            height1 = 300.dp,
+                            height2 = 240.dp,
+                            height3 = 200.dp,
+                            width = 100.dp,
+                            color = Color.Magenta,
+                            strokeWidth = 4.dp
+                        )
                     }
-                }
             }
         }
     }
